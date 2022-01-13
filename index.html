@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
 <link rel="apple-touch-icon" href="https://code4fukui.github.io/mykkrec/icon.png">
-<title>マイ健康観察アプリ</title>
+<title>掲示板</title>
 </head><body>
-<h1>マイ健康観察アプリ</h1>
+<h1>掲示板</h1>
 <input id=memo style="font-size:16px"><button id=btn>memo</button>
 <div id=list style="white-space: pre-wrap;"></div>
 
@@ -11,12 +11,12 @@ import { Day } from "https://js.sabae.cc/DateTime.js";
 
 onload = () => {
     //localStorage.removeItem("kklist");
-    localStorage.kklist = localStorage.kklist || "";
-    list.innerHTML = localStorage.kklist;
+    localStorage.kilist = localStorage.kilist || "";
+    list.innerHTML = localStorage.kilist;
     btn.onclick = () => {
         const s = new Day() + " " + memo.value + "\n";
-        localStorage.kklist = s + localStorage.kklist;
-        list.innerHTML = localStorage.kklist;
+        localStorage.kilist = s + localStorage.kilist;
+        list.innerHTML = localStorage.kilist;
     };
 };
 </script>
